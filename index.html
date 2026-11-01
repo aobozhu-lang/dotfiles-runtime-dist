@@ -3,417 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Humanistic Care in the Age of AI | Research Initiative</title>
-  <meta name="description" content="Investigating the dual frontiers of artificial intelligence in humanistic care: positive catalysts for human dignity and ethical defense against systemic risks.">
-  <style>
-    :root {
-      --primary: #0f172a;
-      --secondary: #1e293b;
-      --accent: #2563eb;
-      --accent-soft: #eff6ff;
-      --risk: #dc2626;
-      --risk-soft: #fef2f2;
-      --positive: #059669;
-      --positive-soft: #ecfdf5;
-      --text: #1e293b;
-      --text-muted: #64748b;
-      --bg-page: #f8fafc;
-      --card-bg: #ffffff;
-      --border: #e2e8f0;
-      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      line-height: 1.7;
-      color: var(--text);
-      background-color: var(--bg-page);
-      scroll-behavior: smooth;
-    }
-    header {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--border);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    .header-inner {
-      max-width: 1140px;
-      margin: 0 auto;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .brand {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: var(--primary);
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .brand-tag {
-      background: var(--accent-soft);
-      color: var(--accent);
-      font-size: 0.75rem;
-      padding: 0.2rem 0.5rem;
-      border-radius: 4px;
-      font-weight: 600;
-      text-transform: uppercase;
-    }
-    nav a {
-      color: var(--text-muted);
-      text-decoration: none;
-      margin-left: 1.75rem;
-      font-size: 0.92rem;
-      font-weight: 500;
-      transition: color 0.2s ease;
-    }
-    nav a:hover { color: var(--accent); }
-    .hero {
-      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
-      color: #ffffff;
-      padding: 6rem 2rem 5rem;
-      text-align: center;
-      position: relative;
-    }
-    .hero-container { max-width: 880px; margin: 0 auto; }
-    .badge {
-      display: inline-block;
-      padding: 0.4rem 1rem;
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 999px;
-      font-size: 0.85rem;
-      letter-spacing: 0.05em;
-      margin-bottom: 1.5rem;
-      color: #cbd5e1;
-    }
-    .hero h1 {
-      font-size: 2.85rem;
-      font-weight: 800;
-      line-height: 1.25;
-      margin-bottom: 1.5rem;
-      letter-spacing: -0.03em;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      color: #94a3b8;
-      max-width: 760px;
-      margin: 0 auto 2.5rem;
-      font-weight: 300;
-    }
-    .container { max-width: 1140px; margin: 0 auto; padding: 5rem 2rem; }
-    .section-title {
-      font-size: 2rem;
-      font-weight: 800;
-      color: var(--primary);
-      margin-bottom: 0.75rem;
-      letter-spacing: -0.02em;
-    }
-    .section-subtitle {
-      color: var(--text-muted);
-      font-size: 1.05rem;
-      margin-bottom: 3rem;
-      max-width: 720px;
-    }
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 2rem;
-    }
-    .card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 2.5rem;
-      box-shadow: var(--shadow-sm);
-      transition: all 0.25s ease;
-    }
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-lg);
-    }
-    .card-icon {
-      font-size: 1.75rem;
-      margin-bottom: 1rem;
-      display: inline-block;
-    }
-    .card h3 {
-      font-size: 1.35rem;
-      color: var(--primary);
-      margin-bottom: 0.75rem;
-    }
-    .card p {
-      color: var(--text-muted);
-      font-size: 0.98rem;
-      line-height: 1.7;
-    }
-    .tag {
-      display: inline-block;
-      font-size: 0.78rem;
-      font-weight: 600;
-      padding: 0.25rem 0.65rem;
-      border-radius: 999px;
-      margin-bottom: 1rem;
-    }
-    .tag-positive { background: var(--positive-soft); color: var(--positive); }
-    .tag-risk { background: var(--risk-soft); color: var(--risk); }
-    .table-container {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      overflow-x: auto;
-      margin-top: 2rem;
-      box-shadow: var(--shadow-sm);
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      text-align: left;
-      font-size: 0.95rem;
-    }
-    th {
-      background: #f1f5f9;
-      color: var(--primary);
-      font-weight: 600;
-      padding: 1.25rem 1.5rem;
-      border-bottom: 1px solid var(--border);
-    }
-    td {
-      padding: 1.25rem 1.5rem;
-      border-bottom: 1px solid var(--border);
-      color: var(--text);
-    }
-    tr:last-child td { border-bottom: none; }
-    .callout {
-      border-left: 4px solid var(--accent);
-      background: #ffffff;
-      padding: 2.25rem;
-      border-radius: 0 12px 12px 0;
-      border-top: 1px solid var(--border);
-      border-right: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      margin-bottom: 3.5rem;
-    }
-    .callout h4 {
-      color: var(--primary);
-      font-size: 1.25rem;
-      margin-bottom: 0.75rem;
-    }
-    .callout p { color: var(--text-muted); font-size: 1rem; }
-    .contact-card {
-      background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 4rem 2rem;
-      text-align: center;
-      box-shadow: var(--shadow-md);
-    }
-    .contact-card h3 { font-size: 1.85rem; color: var(--primary); margin-bottom: 0.75rem; }
-    .contact-card p { color: var(--text-muted); max-width: 600px; margin: 0 auto 2rem; }
-    .email-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.9rem 2rem;
-      background: var(--accent);
-      color: #ffffff;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 1rem;
-      transition: background 0.2s ease;
-    }
-    .email-btn:hover { background: #1d4ed8; }
-    footer {
-      border-top: 1px solid var(--border);
-      background: #ffffff;
-      padding: 3rem 2rem;
-      text-align: center;
-      color: var(--text-muted);
-      font-size: 0.88rem;
-    }
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 2.15rem; }
-      nav { display: none; }
-    }
-  </style>
+  <title>Humanistic Care Research Initiative</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <header>
     <div class="header-inner">
-      <a href="#" class="brand">
-        Humanistic Care Initiative
-        <span class="brand-tag">AI &amp; Bioethics</span>
-      </a>
-      <nav>
-        <a href="#mission">Theoretical Core</a>
-        <a href="#catalysts">Positive Catalysts</a>
-        <a href="#safeguards">Ethical Guardrails</a>
-        <a href="#matrix">Evaluation Matrix</a>
-        <a href="#contact">Contact</a>
+      <a href="index.html" class="brand">Humanistic Care Initiative</a>
+      <nav class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="subclinical.html">Sub-clinical Care</a>
+        <a href="ai-ethics.html">AI & Ethics</a>
       </nav>
     </div>
   </header>
 
   <section class="hero">
-    <div class="hero-container">
-      <div class="badge">Interdisciplinary Working Group</div>
-      <h1>Human Dignity &amp; Compassion in the Age of Generative AI</h1>
-      <p>Investigating the dual frontiers: Empowering humanistic care through computational empathy while rigorously defending against systemic dehumanization.</p>
-    </div>
+    <h1>Bridging Human Compassion & Technical Frontier</h1>
+    <p>An independent research group dedicated to exploring humanistic rehabilitation for sub-clinical mental health conditions and evaluating the profound impacts of Large Language Models (LLMs) on modern psychosocial care.</p>
   </section>
 
   <main class="container">
-    
-    <section id="mission">
-      <div class="callout">
-        <h4>Core Scientific Thesis</h4>
-        <p>As artificial intelligence shifts from analytical tools to cognitive and relational agents, it fundamentally alters how human suffering, psychosocial support, and clinical care are administered. Our research framework addresses a singular imperative: <strong>AI must never replace human conscience, but serve as an amplifying infrastructure for human compassion.</strong></p>
-      </div>
-    </section>
+    <div class="section-header">
+      <h2>Our Core Research Domains</h2>
+      <p>Investigating the intersection of psychological resilience and computational alignment to foster a healthier digital society.</p>
+    </div>
 
-    <!-- SECTION 1: POSITIVE CATALYSTS -->
-    <section id="catalysts">
-      <h2 class="section-title">Positive Catalysts: Augmenting Human Care</h2>
-      <p class="section-subtitle">Empirical pathways through which generative systems and algorithmic modeling enhance personal dignity, alleviate suffering, and bridge care shortages.</p>
+    <div class="grid">
+      <a href="subclinical.html" style="text-decoration: none; color: inherit;">
+        <div class="card">
+          <div class="card-icon">🌱</div>
+          <h3>Sub-clinical Mental Health</h3>
+          <p>Addressing the "gray zone" of mental health: burnout, prolonged stress, languishing, and mild anxiety. We focus on early intervention, destigmatization, and holistic rehabilitation frameworks before symptoms escalate to clinical thresholds.</p>
+        </div>
+      </a>
       
-      <div class="grid-2">
+      <a href="ai-ethics.html" style="text-decoration: none; color: inherit;">
         <div class="card">
-          <span class="tag tag-positive">Cognitive Offloading</span>
-          <div class="card-icon">🩺</div>
-          <h3>Mitigating Clinical Burnout</h3>
-          <p>Caregiver exhaustion directly erodes empathetic presence. AI systems capable of automating complex clinical charting, diagnostic synthesis, and procedural coordination restore the most scarce resource in medicine: <em>unhurried physician-patient conversational time</em>.</p>
+          <div class="card-icon">🤖</div>
+          <h3>AI in Psychosocial Therapy</h3>
+          <p>Analyzing the dual-edged sword of Generative AI. We research how LLMs democratize access to cognitive behavioral support, while rigorously mapping out ethical guardrails against emotional exploitation, hallucinations, and privacy risks.</p>
         </div>
+      </a>
+    </div>
 
-        <div class="card">
-          <span class="tag tag-positive">Relational Continuity</span>
-          <div class="card-icon">🤝</div>
-          <h3>Accessible Psychosocial Companion</h3>
-          <p>Deploying non-judgmental, round-the-clock conversational scaffolding for socially isolated demographics, early-stage dementia patients, and individuals enduring grief, serving as a low-barrier preliminary triage buffer.</p>
-        </div>
-
-        <div class="card">
-          <span class="tag tag-positive">Bioethical Translation</span>
-          <div class="card-icon">📖</div>
-          <h3>Democratizing Medical Literacy</h3>
-          <p>Translating esoteric clinical terminology and complex palliative care prognoses into culturally tailored, empathetic explanations that empower patients and families to make autonomous, dignified end-of-life choices.</p>
-        </div>
-
-        <div class="card">
-          <span class="tag tag-positive">Systemic Equity</span>
-          <div class="card-icon">⚖️</div>
-          <h3>Universal Care Scaling</h3>
-          <p>Delivering high-caliber psychological first-aid and rehabilitative mental health frameworks to underserved rural communities and resource-constrained regions where specialist-to-patient ratios exceed critical thresholds.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 2: ETHICAL SAFEGUARDS -->
-    <section id="safeguards" style="margin-top: 5rem;">
-      <h2 class="section-title">Systemic Risks: The Need for Defensive Protocols</h2>
-      <p class="section-subtitle">Critical vulnerabilities where unchecked algorithmic deployment threatens autonomy, privacy, and the authenticity of care.</p>
-      
-      <div class="grid-2">
-        <div class="card">
-          <span class="tag tag-risk">Deceptive Empathy</span>
-          <div class="card-icon">🎭</div>
-          <h3>Simulated Affect &amp; Emotional Exploitation</h3>
-          <p>AI lacks sentience; its "warmth" is an optimization function. Vulnerable populations risk forming profound unilateral attachments to synthetic agents, creating dependencies prone to corporate manipulation or abrupt discontinuation.</p>
-        </div>
-
-        <div class="card">
-          <span class="tag tag-risk">Epistemic Erasure</span>
-          <div class="card-icon">📉</div>
-          <h3>Algorithmic Reductionism</h3>
-          <p>Quantifying human grief, existential pain, and spiritual distress into standardized metric tokens leads to the loss of nuanced, lived experiences that fall outside the statistical distribution of training corpora.</p>
-        </div>
-
-        <div class="card">
-          <span class="tag tag-risk">Sovereignty &amp; Privacy</span>
-          <div class="card-icon">🔒</div>
-          <h3>Posthumous &amp; Deeply Personal Data Harvest</h3>
-          <p>The monetization of confessional dialogue and intimate mental health narratives presents irreversible privacy breaches, including unauthorized "digital resurrection" chatbots constructed without robust consent frameworks.</p>
-        </div>
-
-        <div class="card">
-          <span class="tag tag-risk">Institutional Depersonalization</span>
-          <div class="card-icon">🏢</div>
-          <h3>Austerity-Driven Automation</h3>
-          <p>The moral hazard wherein institutions substitute cost-free AI interlocutors for genuine human touch, establishing a two-tiered society where biological empathy becomes a luxury good reserved for the privileged.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 3: COMPARATIVE MATRIX -->
-    <section id="matrix" style="margin-top: 5rem;">
-      <h2 class="section-title">Institutional Evaluation Matrix</h2>
-      <p class="section-subtitle">Operational parameters for deploying computational models in human care sectors.</p>
-      
-      <div class="table-container">
-        <table>
-          <thead>
-            <tr>
-              <th>Care Vector</th>
-              <th>Optimal AI Enhancement</th>
-              <th>Boundary Violation (Forbidden)</th>
-              <th>Ethical Defense Mechanism</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Palliative &amp; Hospice</strong></td>
-              <td>Pain logging, dynamic symptom tracking</td>
-              <td>Autonomous end-of-life decision routing</td>
-              <td>Human-in-the-loop mandatory override</td>
-            </tr>
-            <tr>
-              <td><strong>Therapeutic Support</strong></td>
-              <td>CBT thought-reframing exercises</td>
-              <td>Diagnosis of complex personality disorders</td>
-              <td>Strict epistemic humility disclaimers</td>
-            </tr>
-            <tr>
-              <td><strong>Geriatric Care</strong></td>
-              <td>Cognitive stimulation, fall detection</td>
-              <td>Replacing human interaction quotas</td>
-              <td>Mandatory offline human touch thresholds</td>
-            </tr>
-            <tr>
-              <td><strong>Vulnerable Youth</strong></td>
-              <td>Adaptive educational scaffolding</td>
-              <td>Unmonitored parasocial bonding</td>
-              <td>Episodic memory wipe protocols</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- SECTION 4: CONTACT / INQUIRY -->
-    <section id="contact" style="margin-top: 5rem;">
-      <div class="contact-card">
-        <h3>Collaborative Inquiries &amp; Preprints</h3>
-        <p>We welcome interdisciplinary submissions, peer critiques, and collaborative inquiries from researchers in bioethics, cognitive science, and machine learning alignment.</p>
-        <a href="mailto:research@humanistic-care.org" class="email-btn">
-          ✉️ research@humanistic-care.org
-        </a>
-      </div>
-    </section>
-
+    <div class="content-block" style="margin-top: 5rem;">
+      <h3>Open Collaboration</h3>
+      <p>We invite researchers, clinicians, and AI alignment engineers to collaborate on developing robust frameworks for technology-assisted humanistic care.</p>
+      <br>
+      <p><strong>Contact our editorial office:</strong> <a href="mailto:research@humanistic-care.org" style="color: #0ea5e9;">research@humanistic-care.org</a></p>
+    </div>
   </main>
 
   <footer>
-    <p>&copy; 2026 Humanistic Care Research Initiative. Interdisciplinary Studies on AI Alignment &amp; Bioethics.</p>
-    <p style="margin-top: 0.5rem; font-size: 0.8rem;">humanistic-care.org &middot; Open Scholarly Communication</p>
+    <p>&copy; 2026 Humanistic Care Research Initiative. All rights reserved.</p>
   </footer>
-
 </body>
 </html>
