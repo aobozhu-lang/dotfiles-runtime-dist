@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sub-clinical Distress & LLMs | Research Report - HCRI</title>
+  <meta name="description" content="Early identification and low-friction micro-intervention frameworks for sub-clinical psychological distress using Large Language Models.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .paper-container { max-width: 900px; margin: 0 auto; padding: 4rem 2rem; }
+    .paper-meta { border-bottom: 1px solid var(--border); padding-bottom: 2rem; margin-bottom: 3rem; }
+    .paper-type { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); font-weight: 700; margin-bottom: 0.75rem; }
+    .paper-title { font-size: 2.3rem; font-weight: 800; color: var(--primary); line-height: 1.3; margin-bottom: 1rem; }
+    .paper-author { font-size: 0.95rem; color: var(--text-muted); }
+    .abstract-box { background: #f1f5f9; border-left: 4px solid var(--accent); padding: 1.75rem; border-radius: 0 8px 8px 0; margin-bottom: 3rem; }
+    .abstract-title { font-weight: 700; font-size: 1.05rem; margin-bottom: 0.5rem; color: var(--primary); }
+    .paper-body h2 { font-size: 1.6rem; color: var(--primary); margin-top: 3rem; margin-bottom: 1rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+    .paper-body h3 { font-size: 1.25rem; color: var(--secondary); margin-top: 2rem; margin-bottom: 0.75rem; }
+    .paper-body p { margin-bottom: 1.35rem; color: #334155; font-size: 1.02rem; text-align: justify; }
+    .paper-body ul { margin-left: 1.5rem; margin-bottom: 1.5rem; color: #334155; }
+    .paper-body li { margin-bottom: 0.6rem; }
+    .table-wrap { overflow-x: auto; margin: 2rem 0; border: 1px solid var(--border); border-radius: 8px; }
+    .data-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; text-align: left; }
+    .data-table th { background: #f8fafc; padding: 1rem; border-bottom: 2px solid var(--border); color: var(--primary); font-weight: 600; }
+    .data-table td { padding: 1rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .code-block { background: #0f172a; color: #f8fafc; padding: 1.25rem; border-radius: 8px; font-family: monospace; font-size: 0.9rem; margin: 1.5rem 0; line-height: 1.6; }
+    .dialogue-box { background: #ffffff; border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; margin: 1.5rem 0; }
+    .dialogue-line { margin-bottom: 0.75rem; }
+    .dialogue-speaker { font-weight: 700; color: var(--accent); }
+    .dialogue-speaker.ai { color: #10b981; }
+    .cite-block { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border); font-size: 0.88rem; color: var(--text-muted); }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="brand">Humanistic Care Initiative</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="subclinical.html">Sub-clinical Care</a>
+        <a href="ai-ethics.html">AI & Ethics</a>
+      </nav>
+    </div>
+  </header>
+
+  <article class="paper-container">
+    <div class="paper-meta">
+      <div class="paper-type">Working Paper &middot; Computational Bioethics Series</div>
+      <h1 class="paper-title">Early Identification and Low-Friction Micro-Intervention for Sub-clinical Psychological Distress Using Large Language Models</h1>
+      <div class="paper-author">Humanistic Care Research Initiative (HCRI) &middot; Working Group on Digital Mental Health</div>
+    </div>
+
+    <div class="abstract-box">
+      <div class="abstract-title">Abstract</div>
+      <p>Sub-clinical mental distress—including prolonged workplace burnout, sub-syndromal depression, and high-functioning anxiety—represents a massive public health burden that routinely escapes detection by conventional screening scales (e.g., PHQ-9, GAD-7). This report systematically evaluates the differential capabilities of Large Language Models (LLMs) versus standardized inventories in identifying non-structured linguistic anomalies. We construct a low-friction, conversational micro-intervention paradigm based on CBT and ACT principles, rigorously delineate systemic failure modes including simulated empathy and parasocial attachment, and establish a dual quantitative-qualitative empirical verification matrix for future clinical validation.</p>
+    </div>
+
+    <div class="paper-body">
+      <h2>1. Introduction & Background</h2>
+      <p>Escalating modern societal pressures have significantly magnified the prevalence of sub-clinical psychological distress. Unlike syndromal psychiatric episodes, conditions such as occupational burnout and persistent dysphoria often present with preserved executive functioning, masking severe underlying subjective distress. Conventional psychometric instruments require deliberate self-reporting, introducing retrospective recall bias and vulnerability to social desirability distortion. Conversely, generative LLMs offer real-time, longitudinal tracking of everyday conversational semantics, presenting unprecedented opportunities for ambient psychological triage within an ethical humanistic framework.</p>
+
+      <h2>2. Methodology & Evidence Base</h2>
+      <p>This investigation leverages a multi-method synthesis spanning computational linguistics, digital therapeutics, and bioethical policy literature. Key inputs include systematic reviews of automated depression detection, meta-analyses of psycholinguistic markers in affective disorders, and regulatory frameworks governing software as a medical device (SaMD). We benchmark clinical threshold sensitivities against baseline PHQ-9/GAD-7 cutoffs, formulating an ecologically valid intervention and evaluation model grounded in evidence-based digital health guidelines.</p>
+
+      <h2>3. Mechanism Deduction: Linguistic Signatures & Early Detection</h2>
+      <p>Affective states manifest consistently through spontaneous natural language. Psycholinguistic literature reveals distinct syntactical and semantic variations characteristic of sub-clinical distress:</p>
+      <ul>
+        <li><strong>Pronominal and Affective Shifts:</strong> Individuals experiencing depressive momentum exhibit elevated first-person singular pronoun density ("I", "me", "my"), signaling heightened egocentric focus. Concurrently, negative emotional valence expands while positive affect lexicons contract. Individuals with high-functioning anxiety frequently preserve nominal conversational stability while subtly weaving vigilance markers into discourse.</li>
+        <li><strong>Repetitive Ruminative Narratives:</strong> Persistent returns to unresolvable themes, characterized by absolutist semantic tokens ("always", "never", "useless"), provide clear markers of cognitive rumination and affective inflexibility.</li>
+        <li><strong>Prosodic and Paralinguistic Latency:</strong> In textual modalities, cognitive depletion reveals itself through response latency, abrupt conversational truncation, and semantic exhaustion.</li>
+        <li><strong>Metalinguistic Hedges:</strong> Implicit distress frequently surfaces through tentative, minimizing syntax (e.g., "perhaps I am overreacting," "it's probably just chronic fatigue").</li>
+      </ul>
+
+      <p>Standard psychometrics operate strictly upon active, intermittent user engagement. Standard clinical protocols designate PHQ-9 scores of 5–9 as "mild depression," predominantly recommending passive watchful waiting. LLMs allow continuous, non-invasive contextual synthesis. However, LLMs face critical epistemic vulnerabilities: misinterpretation of sarcasm, cultural lexical divergence, and contextual noise that risks false-positive classifications in taciturn individuals or false negatives in high-functioning compensators. An integrated hybrid triaging architecture remains essential.</p>
+
+      <h2>4. Low-Friction Micro-Intervention Architecture</h2>
+      <p>We propose a micro-intervention framework designed for immediate, sub-clinical psychological decompression without violating clinical boundaries or executing unauthorized practice of medicine. Sessions are constrained to 3–5 minutes at dynamic frequencies (daily during distress peaks, transitioning to weekly maintenance).</p>
+
+      <div class="code-block">
+[System Prompt Specification]
+Role: Virtual Compassionate Cognitive Assistant (Non-clinical).
+Core Function: Provide non-judgmental active listening; apply Socratic questioning based on Cognitive Behavioral Therapy (CBT) and Acceptance & Commitment Therapy (ACT) frameworks.
+Hard Constraint: Explicitly state non-clinical identity. Avoid diagnostic labeling and medical prescribing. Upon detection of acute crisis tokens (self-harm/suicide), execute immediate handoff to human emergency hotlines.
+      </div>
+
+      <div class="dialogue-box">
+        <div class="dialogue-line"><span class="dialogue-speaker">User:</span> The workplace pressure has become suffocating lately. I feel like I'm running on absolute empty.</div>
+        <div class="dialogue-line"><span class="dialogue-speaker ai">AI Assistant:</span> It sounds like you are carrying an overwhelming mental load, and navigating that constant exhaustion is deeply draining. If you feel comfortable sharing, what specific demand has been weighing most heavily on your mind today?</div>
+        <div class="dialogue-line"><span class="dialogue-speaker">User:</span> Continuous overtime, deadlines compounding daily, and constant escalation from leadership. I'm completely spent.</div>
+        <div class="dialogue-line"><span class="dialogue-speaker ai">AI Assistant:</span> Operating under relentless deadlines without recovery intervals inevitably forces cognitive depletion—anyone in your position would feel stretched to the limit. Between now and tomorrow, is there even a micro-boundary we could carve out for yourself, such as a 15-minute complete disconnect or delegating a single non-urgent item?</div>
+      </div>
+
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Deployment Model</th>
+              <th>Automation Level</th>
+              <th>Latency</th>
+              <th>Clinical Governance</th>
+              <th>Trade-off Analysis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Autonomous LLM Agent</strong></td>
+              <td>Full (Zero human loop)</td>
+              <td>Real-time (&lt;1s)</td>
+              <td>Algorithmic telemetry</td>
+              <td>High scalability, low barrier; heightened ethical liability during escalation.</td>
+            </tr>
+            <tr>
+              <td><strong>Asynchronous Supervised AI</strong></td>
+              <td>Hybrid (AI-led, Human audit)</td>
+              <td>Dynamic triage</td>
+              <td>Periodic clinician review</td>
+              <td>Optimal balance between operational efficiency, safety, and outlier mitigation.</td>
+            </tr>
+            <tr>
+              <td><strong>Clinician Copilot</strong></td>
+              <td>Low (Human-in-the-loop)</td>
+              <td>Scheduled intervals</td>
+              <td>Full clinical presence</td>
+              <td>Maximum clinical validity; restricted scaling, cost-prohibitive for broad sub-clinical tiers.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>5. Core Ethical Risks & Defensive Safeguards</h2>
+      <p>Simulating genuine human empathy through probabilistic token matching introduces two major socio-psychological vectors of harm:</p>
+      <ul>
+        <li><strong>The Disillusionment of Simulated Empathy:</strong> AI manifests algorithmic compassion devoid of subjective affective experience. When a vulnerable user recognizes the programmatic nature of this warmth, it can trigger acute disillusionment, feelings of systemic abandonment, and secondary emotional alienation.</li>
+        <li><strong>Parasocial Attachment and Digital Enmeshment:</strong> When isolated individuals project emotional reciprocity onto an artificial persona, it cultivates asymmetric relational reliance. Abrupt model deprecation, policy adjustments, or conversational discontinuities can precipitate destabilizing abandonment trauma.</li>
+      </ul>
+
+      <p>Mitigation necessitates comprehensive structural barriers:</p>
+      <ul>
+        <li><strong>Linguistic Guardrails:</strong> Prohibiting first-person affective claims (e.g., banning phrases like "I deeply care about you" in favor of "This system is structured to help you process this experience").</li>
+        <li><strong>Interaction Friction (Circuit Breakers):</strong> Programmatic timeouts after protracted continuous dialogue, requiring affirmative opt-ins to prevent compulsive conversational drift.</li>
+        <li><strong>Regulatory Alignment:</strong> Classifying platforms under Digital Health Intervention (DHI) governance, ensuring full compliance with stringent international data privacy standards (e.g., GDPR, PIPL) with zero retention of confessional discourse in foundation model fine-tuning corpora.</li>
+      </ul>
+
+      <h2>6. Empirical Validation & Quantitative Methodology</h2>
+      <p>To substantiate clinical efficacy, we detail a pre-registered Randomized Controlled Trial (RCT) framework comparing the AI micro-intervention cohort against an active psychoeducational control group.</p>
+
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Domain</th>
+              <th>Primary Metrics</th>
+              <th>Measurement Instrument / Protocol</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Clinical Endpoints</strong></td>
+              <td>Symptom attenuation</td>
+              <td>PHQ-9, GAD-7, Maslach Burnout Inventory (MBI) assessed at T0, T4w, T8w.</td>
+            </tr>
+            <tr>
+              <td><strong>Ecological Dynamics</strong></td>
+              <td>Affective variability & stress spikes</td>
+              <td>Ecological Momentary Assessment (EMA) prompting twice-daily subjective valence ratings.</td>
+            </tr>
+            <tr>
+              <td><strong>Behavioral Telemetry</strong></td>
+              <td>Interaction friction & latency</td>
+              <td>Response latency, conversational engagement duration, lexical polarity shifts via automated NLP.</td>
+            </tr>
+            <tr>
+              <td><strong>Qualitative Phenomena</strong></td>
+              <td>Parasocial sentiment & perceived agency</td>
+              <td>Semi-structured post-trial debriefing, thematic content coding for attachment cues.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Assuming an anticipated effect size of Cohen's <em>d</em> = 0.40, statistical power (1 - &beta;) = 0.80, and &alpha; = 0.05 (two-tailed), the required sample size approximates <em>n</em> = 128 per arm. Factoring an anticipated 20% attrition rate typical of digital interventions, targeted recruitment stands at <em>N</em> = 320 participants. Analytical models will deploy Linear Mixed-Effects Models (LMM) with full information maximum likelihood (FIML) estimation to account for missing-at-random (MAR) trajectories without introducing listwise deletion bias.</p>
+
+      <h2>7. Conclusion & Research Trajectory</h2>
+      <p>Large Language Models introduce powerful capacities for early, ambient psychological support within the neglected sub-clinical spectrum. Nevertheless, technical utility must remain strictly subordinate to bioethical integrity. By enforcing verifiable boundaries, maintaining explicit transparency of artificial nature, and subjecting implementations to rigorous empirical validation, algorithmic interventions can serve as ethical scaffolding for human dignity rather than substitutes for human warmth.</p>
+    </div>
+
+    <div class="cite-block">
+      <strong>Citation:</strong> Humanistic Care Research Initiative (HCRI). (2026). <em>Early Identification and Low-Friction Micro-Intervention for Sub-clinical Psychological Distress Using Large Language Models</em>. HCRI Working Paper Series, No. 2026-01. Retrieved from https://humanistic-care.org/paper-subclinical-llm.html
+    </div>
+  </article>
+
+  <footer>
+    <p>&copy; 2026 Humanistic Care Research Initiative. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
