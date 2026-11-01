@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Humanistic Care Research Initiative</title>
+  <meta name="description" content="Dedicated to interdisciplinary research on life dignity, compassionate healthcare, and ethical humanistic support.">
+  <style>
+    :root {
+      --primary: #1e3a5f;
+      --primary-light: #2d5485;
+      --accent: #c48b48;
+      --text: #2d3748;
+      --text-muted: #5a6a80;
+      --bg-page: #f8fafc;
+      --card-bg: #ffffff;
+      --border: #e2e8f0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.7;
+      color: var(--text);
+      background-color: var(--bg-page);
+    }
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border);
+      padding: 1.25rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+    nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+    nav a:hover { color: var(--primary); }
+    .hero {
+      background: linear-gradient(135deg, #1e3a5f 0%, #152740 100%);
+      color: #ffffff;
+      padding: 5.5rem 2rem 4.5rem;
+      text-align: center;
+    }
+    .hero-container { max-width: 820px; margin: 0 auto; }
+    .badge {
+      display: inline-block;
+      padding: 0.35rem 0.85rem;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 999px;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1.5rem;
+      color: #e2e8f0;
+    }
+    .hero h1 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      line-height: 1.25;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.03em;
+    }
+    .hero p {
+      font-size: 1.15rem;
+      color: #cbd5e1;
+      margin-bottom: 2rem;
+      font-weight: 300;
+    }
+    .container { max-width: 1080px; margin: 0 auto; padding: 4.5rem 2rem; }
+    .section-title {
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+    }
+    .section-subtitle {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      margin-bottom: 3rem;
+      max-width: 650px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2.25rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+    }
+    .card h3 {
+      font-size: 1.3rem;
+      color: var(--primary);
+      margin-bottom: 0.85rem;
+    }
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.96rem;
+      line-height: 1.65;
+    }
+    .about-box {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
+      padding: 2.5rem;
+      border-radius: 8px;
+      margin-bottom: 3rem;
+    }
+    .about-box p { font-size: 1.05rem; color: #334155; margin-bottom: 1rem; }
+    .about-box p:last-child { margin-bottom: 0; }
+    .contact-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .contact-card h3 { font-size: 1.6rem; color: var(--primary); margin-bottom: 0.75rem; }
+    .contact-card p { color: var(--text-muted); margin-bottom: 1.75rem; }
+    .email-btn {
+      display: inline-block;
+      padding: 0.85rem 1.75rem;
+      background: var(--primary);
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background 0.2s ease;
+    }
+    .email-btn:hover { background: var(--primary-light); }
+    footer {
+      border-top: 1px solid var(--border);
+      background: #ffffff;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    @media (max-width: 640px) {
+      .hero h1 { font-size: 2rem; }
+      nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="#" class="brand">Humanistic Care Initiative</a>
+      <nav>
+        <a href="#mission">Mission</a>
+        <a href="#research">Research</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-container">
+      <div class="badge">Independent Academic Initiative</div>
+      <h1>Advancing Human Dignity, Compassion & Ethical Care</h1>
+      <p>Dedicated to exploring the intersections of clinical humanism, bioethics, and psychosocial wellbeing through evidence-based independent research.</p>
+    </div>
+  </section>
+
+  <main class="container">
+    <section id="mission">
+      <h2 class="section-title">Institutional Overview</h2>
+      <p class="section-subtitle">Bridging theoretical ethics and real-world compassionate healthcare practices.</p>
+      
+      <div class="about-box">
+        <p>The <strong>Humanistic Care Research Initiative</strong> functions as an open scholarly community committed to examining the human dimensions of care across diverse societal and clinical environments.</p>
+        <p>Our work focuses on understanding how institutional practices, healthcare environments, and social frameworks impact individual dignity, caregiver resilience, and long-term community health outcomes.</p>
+      </div>
+    </section>
+
+    <section id="research" style="margin-top: 4rem;">
+      <h2 class="section-title">Key Research Domains</h2>
+      <p class="section-subtitle">Core thematic clusters guiding our inquiries and publications.</p>
+      
+      <div class="grid">
+        <div class="card">
+          <h3>Bioethics & Life Dignity</h3>
+          <p>Investigating the ethical considerations surrounding end-of-life care, patient autonomy, and the preservation of personal identity in complex medical environments.</p>
+        </div>
+        <div class="card">
+          <h3>Caregiver Psychological Resilience</h3>
+          <p>Analyzing systemic burnout, psychological trauma, and institutional support systems designed to protect healthcare practitioners and family caregivers.</p>
+        </div>
+        <div class="card">
+          <h3>Human-Centered Care Delivery</h3>
+          <p>Evaluating clinical frameworks that prioritize empathetic doctor-patient communication, cultural competence, and holistic psychosocial interventions.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top: 5rem;">
+      <div class="contact-card">
+        <h3>Academic Inquiries & Collaboration</h3>
+        <p>For research communications, journal correspondences, or manuscript preprints, reach our editorial coordination office:</p>
+        <a href="mailto:research@humanistic-care.org" class="email-btn">research@humanistic-care.org</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Humanistic Care Research Initiative. All rights reserved.</p>
+    <p style="margin-top: 0.5rem; font-size: 0.8rem;">humanistic-care.org &middot; Open Academic Inquiries</p>
+  </footer>
+
+</body>
+</html>
