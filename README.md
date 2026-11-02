@@ -23,6 +23,7 @@ This repository hosts compiled runtime configs, portable toolchain stubs, and pr
 ├── ai-ethics.html                # Automated policy & pipeline safety check stubs
 ├── toolkits.html                 # Automated profiling toolkits & utility helpers
 ├── governance.html               # CI/CD compliance policies & workspace governance
+├── team.html                     # Maintainer keyring & runner node allocation specs
 ├── paper-subclinical-llm.html    # Trace log: subclinical latency profiling specs
 ├── paper-crisis-guardrails.html  # Safety monitor spec: containment & failover guardrails
 ├── paper-caregiver-ai.html       # Daemon runtime spec: worker & watchdog configs
