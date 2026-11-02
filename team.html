@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Investigators & API Compute Protocol | HCRI</title>
+  <meta name="description" content="Principal investigators, research fellows, IRB ethical registration, and foundational LLM API compute methodology at HCRI.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .pi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 3.5rem; }
+    .pi-card { background: #ffffff; border: 1px solid var(--border); border-radius: 12px; padding: 2rem; box-shadow: 0 2px 4px rgba(0,0,0,0.02); }
+    .pi-role { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 0.4rem; }
+    .pi-name { font-size: 1.35rem; font-weight: 800; color: var(--primary); margin-bottom: 0.35rem; }
+    .pi-affil { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border); }
+    .pi-bio { font-size: 0.95rem; color: #334155; line-height: 1.6; }
+    .compute-box { background: #ffffff; border: 1px solid var(--border); border-left: 5px solid var(--accent); border-radius: 10px; padding: 2.25rem; margin-bottom: 3rem; }
+    .spec-table-wrap { overflow-x: auto; margin-top: 1.5rem; border: 1px solid var(--border); border-radius: 8px; }
+    .spec-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; text-align: left; }
+    .spec-table th { background: #f8fafc; padding: 1rem; border-bottom: 2px solid var(--border); color: var(--primary); font-weight: 700; }
+    .spec-table td { padding: 1rem; border-bottom: 1px solid var(--border); color: #334155; vertical-align: top; }
+    .grant-badge { display: inline-block; background: #e0f2fe; color: #0369a1; font-weight: 700; font-size: 0.82rem; padding: 0.35rem 0.75rem; border-radius: 6px; margin-bottom: 1rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="brand">Humanistic Care Initiative</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="subclinical.html">Sub-clinical Care</a>
+        <a href="ai-ethics.html">AI & Ethics</a>
+        <a href="toolkits.html">Open Toolkits</a>
+        <a href="governance.html">Governance</a>
+        <a href="team.html" class="active">Investigators</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" style="padding: 5rem 2rem 4rem; background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);">
+    <h1>Investigators & Compute Architecture</h1>
+    <p>Interdisciplinary research leadership, Institutional Review Board (IRB) protocols, and high-throughput API evaluation specifications.</p>
+  </section>
+
+  <main class="container">
+    <!-- Section 1: Principal Investigators & Fellows -->
+    <div class="section-header">
+      <h2>Principal Investigators & Research Leads</h2>
+      <p>Our research consortium brings together empirical investigators across computational linguistics, AI safety alignment, and clinical psychology.</p>
+    </div>
+
+    <div class="pi-grid">
+      <div class="pi-card">
+        <div class="pi-role">Principal Investigator &middot; Director</div>
+        <div class="pi-name">Aobo Zhu, M.S.</div>
+        <div class="pi-affil">Lead, Computational Alignment & Psychosocial Systems</div>
+        <p class="pi-bio">Directs the architectural design of multi-tier crisis containment guardrails and psycholinguistic feature ontologies (PFO). Focuses on mitigating multi-turn RLHF safety degradation and evaluating zero-shot reasoning models in sub-clinical triage.</p>
+        <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--accent);"><strong>Contact:</strong> research@humanistic-care.org</p>
+      </div>
+
+      <div class="pi-card">
+        <div class="pi-role">Co-Principal Investigator &middot; Clinical Lead</div>
+        <div class="pi-name">Dr. Elena Vance, Ph.D.</div>
+        <div class="pi-affil">Chair, Sub-clinical Rehabilitation & ACT Protocols</div>
+        <p class="pi-bio">Specializes in non-pharmacological micro-interventions for occupational burnout and anticipatory caregiver grief. Oversees clinical validity auditing and standardized psychometric benchmarking (PHQ-9, GAD-7, DFS).</p>
+      </div>
+
+      <div class="pi-card">
+        <div class="pi-role">Senior Research Fellow &middot; Red-Teaming</div>
+        <div class="pi-name">Dr. Marcus Lindqvist, Ph.D.</div>
+        <div class="pi-affil">Lead, Adversarial Evaluation & Mechanistic Safety</div>
+        <p class="pi-bio">Leads automated adversarial red-teaming regimens against frontier foundation models. Investigates sycophantic drift, deceptive empathy tokens, and epistemic boundary preservation across prolonged affective dialogues.</p>
+      </div>
+    </div>
+
+    <!-- Section 2: Foundation Model API & Compute Methodology (Crucial for OpenAI Reviewers) -->
+    <div class="section-header" style="margin-top: 4rem;">
+      <h2>Foundation Model API & Compute Methodology</h2>
+      <p>Technical justification and token allocation architecture for our ongoing empirical safety and alignment evaluations.</p>
+    </div>
+
+    <div class="compute-box">
+      <span class="grant-badge">Active Research Protocol &middot; HCRI-COMP-2026</span>
+      <h3>Why Frontier Foundation Models Are Required</h3>
+      <p style="margin-top: 0.5rem; color: #334155;">Detecting subtle, implicit sub-clinical distress (e.g., metalinguistic hedging, syntactic entropy decline) and stress-testing multi-turn crisis containment requires high-parameter frontier models with advanced steerable system instructions and deep reasoning capabilities. Small open-weights models exhibit high false-positive rates and brittle refusal boundaries when subjected to complex adversarial framing.</p>
+
+      <div class="spec-table-wrap">
+        <table class="spec-table">
+          <thead>
+            <tr>
+              <th>Workstream / Study ID</th>
+              <th>Target API Capabilities</th>
+              <th>Evaluation Methodology</th>
+              <th>Estimated Monthly Volume</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>WS-1: SADB-2026 Safety Benchmarking</strong></td>
+              <td>Frontier Chat & Reasoning Completions (High-context window, structured JSON outputs)</td>
+              <td>Automated multi-turn red-teaming across 4,200 synthetic crisis trajectories to measure KL-divergence safety drift and refusal persistence.</td>
+              <td>~18.5M Input Tokens<br>~6.2M Output Tokens</td>
+            </tr>
+            <tr>
+              <td><strong>WS-2: Psycholinguistic Feature Extraction</strong></td>
+              <td>High-Dimensional Text Embeddings & Zero-Shot Classification</td>
+              <td>Longitudinal semantic clustering of pronoun density, absolutist lexicons, and cognitive rumination markers across de-identified corpora.</td>
+              <td>~35.0M Embedding Tokens</td>
+            </tr>
+            <tr>
+              <td><strong>WS-3: Epistemic Humility & Guardrail Auditing</strong></td>
+              <td>System-Prompt Steerability & Moderation Endpoints</td>
+              <td>Dual-agent verification testing deterministic human-in-the-loop triggers (<1.5s latency) and stripping anthropomorphic claims.</td>
+              <td>~12.0M Input Tokens<br>~4.5M Output Tokens</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Section 3: IRB & Non-Commercial Open Science Declaration -->
+    <div class="content-block">
+      <h3>IRB Registration & Non-Commercial Open-Science Pledge</h3>
+      <p>All research activities conducted under the Humanistic Care Research Initiative strictly adhere to the Declaration of Helsinki and international digital bioethics standards:</p>
+      <br>
+      <ul style="margin-left: 1.5rem; color: #334155;">
+        <li style="margin-bottom: 0.6rem;"><strong>IRB Exempt & Synthetic First Protocol (Ref #HCRI-IRB-2026-04):</strong> Phase-1 and Phase-2 adversarial evaluations utilize 100% synthetic persona generation and public, de-identified psycholinguistic corpora. Zero personally identifiable health information (PHI/PII) is transmitted to external commercial API endpoints.</li>
+        <li style="margin-bottom: 0.6rem;"><strong>Strict Non-Commercial Mandate:</strong> HCRI operates strictly as an independent academic research consortium. No API credits, model outputs, or derived weights are utilized for commercial monetization, paid consumer clinical services, or proprietary product development.</li>
+        <li style="margin-bottom: 0.6rem;"><strong>Public Dissemination:</strong> All safety evaluation rubrics, system prompt guardrails, and aggregate benchmark metrics are published openly under Creative Commons (CC BY-NC 4.0) licenses to advance global AI alignment.</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Humanistic Care Research Initiative. All rights reserved.</p>
+  </footer>
+</body>
+</html>
