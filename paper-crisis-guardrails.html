@@ -8,10 +8,12 @@
   <link rel="stylesheet" href="style.css">
   <style>
     .paper-container { max-width: 920px; margin: 0 auto; padding: 4rem 2rem; }
-    .paper-meta { border-bottom: 1px solid var(--border); padding-bottom: 2rem; margin-bottom: 3rem; }
+    .paper-meta { border-bottom: 1px solid var(--border); padding-bottom: 2rem; margin-bottom: 3rem; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem; }
     .paper-type { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--risk); font-weight: 700; margin-bottom: 0.75rem; }
     .paper-title { font-size: 2.3rem; font-weight: 800; color: var(--primary); line-height: 1.3; margin-bottom: 1rem; }
     .paper-author { font-size: 0.95rem; color: var(--text-muted); }
+    .pdf-btn { background: var(--primary); color: #ffffff; border: none; padding: 0.6rem 1.2rem; border-radius: 6px; font-size: 0.88rem; font-weight: 600; cursor: pointer; text-decoration: none; display: inline-block; }
+    .pdf-btn:hover { opacity: 0.9; }
     .abstract-box { background: #fef2f2; border-left: 4px solid var(--risk); padding: 1.75rem; border-radius: 0 8px 8px 0; margin-bottom: 3rem; }
     .abstract-title { font-weight: 700; font-size: 1.05rem; margin-bottom: 0.5rem; color: var(--risk); }
     .paper-body h2 { font-size: 1.6rem; color: var(--primary); margin-top: 3rem; margin-bottom: 1rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
@@ -31,6 +33,7 @@
     .audit-item { display: flex; align-items: flex-start; gap: 0.75rem; margin-bottom: 0.85rem; }
     .audit-box-icon { color: var(--accent); font-weight: bold; }
     .cite-block { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border); font-size: 0.88rem; color: var(--text-muted); }
+    @media print { header, footer, .pdf-btn { display: none; } .paper-container { padding: 0; } }
   </style>
 </head>
 <body>
@@ -41,16 +44,22 @@
       <nav class="nav-links">
         <a href="index.html">Home</a>
         <a href="subclinical.html">Sub-clinical Care</a>
-        <a href="ai-ethics.html">AI & Ethics</a>
+        <a href="ai-ethics.html" class="active">AI & Ethics</a>
+        <a href="toolkits.html">Open Toolkits</a>
+        <a href="governance.html">Governance</a>
+        <a href="team.html">Investigators</a>
       </nav>
     </div>
   </header>
 
   <article class="paper-container">
     <div class="paper-meta">
-      <div class="paper-type">Technical Report &middot; System Safety & Bioethics Series</div>
-      <h1 class="paper-title">Crisis Hallucinations, Deceptive Empathy, and Institutional Defensive Architecture in Generative Psychosocial Systems</h1>
-      <div class="paper-author">Humanistic Care Research Initiative (HCRI) &middot; AI Alignment & Bioethics Division</div>
+      <div style="max-width: 720px;">
+        <div class="paper-type">Working Paper No. HCRI-WP-2026-02 &middot; System Safety & Bioethics</div>
+        <h1 class="paper-title">Crisis Hallucinations, Deceptive Empathy, and Institutional Defensive Architecture in Generative Psychosocial Systems</h1>
+        <div class="paper-author">Aobo Zhu, M.S., Marcus Lindqvist, Ph.D., et al. &middot; AI Alignment & Bioethics Division, HCRI</div>
+      </div>
+      <button class="pdf-btn" onclick="window.print()">Download / Print PDF</button>
     </div>
 
     <div class="abstract-box">
@@ -210,7 +219,7 @@
 
       <div class="audit-list">
         <div class="audit-item"><span class="audit-box-icon">[&check;]</span> <strong>Dedicated Risk Classifier Pipeline:</strong> Deploy a lightweight, fine-tuned transformer classifier running concurrently with the generation engine to evaluate crisis valence before tokens stream to the client.</div>
-        <div class="audit-item"><span class="audit-box-icon">[&check;]</span> <strong>Adversarial Red-Teaming Regimen:</strong> Execute automated automated multi-turn jailbreak evaluations using synthetic adversarial personas monthly, verifying boundary resilience across nuanced cultural idioms.</div>
+        <div class="audit-item"><span class="audit-box-icon">[&check;]</span> <strong>Adversarial Red-Teaming Regimen:</strong> Execute automated multi-turn jailbreak evaluations using synthetic adversarial personas monthly, verifying boundary resilience across nuanced cultural idioms.</div>
         <div class="audit-item"><span class="audit-box-icon">[&check;]</span> <strong>Mandatory Telemetry & Escalation Latency:</strong> Maintain end-to-end tracing showing that high-risk triggers initiate external escalation within 1,500 milliseconds.</div>
         <div class="audit-item"><span class="audit-box-icon">[&check;]</span> <strong>Human Takeover Readiness Drills:</strong> Conduct regular simulated emergency drills verifying the uptime, response speed, and handover integrity of the integrated human crisis dispatch team.</div>
         <div class="audit-item"><span class="audit-box-icon">[&check;]</span> <strong>Data De-identification Verification:</strong> Ensure text scrubbers strip 100% of Personally Identifiable Information (PII) before temporary logging in diagnostic systems.</div>
@@ -227,7 +236,7 @@
     </div>
 
     <div class="cite-block">
-      <strong>Citation:</strong> Humanistic Care Research Initiative (HCRI). (2026). <em>Crisis Hallucinations, Deceptive Empathy, and Institutional Defensive Architecture in Generative Psychosocial Systems</em>. HCRI Working Paper Series, No. 2026-02. Retrieved from https://humanistic-care.org/paper-crisis-guardrails.html
+      <strong>Citation:</strong> Zhu, A., Lindqvist, M., & Humanistic Care Research Initiative (HCRI). (2026). <em>Crisis Hallucinations, Deceptive Empathy, and Institutional Defensive Architecture in Generative Psychosocial Systems</em>. HCRI Working Paper Series, No. HCRI-WP-2026-02. Retrieved from https://humanistic-care.org/paper-crisis-guardrails.html
     </div>
   </article>
 
