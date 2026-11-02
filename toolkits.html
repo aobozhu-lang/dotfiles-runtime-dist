@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Methodology & Open Toolkits | HCRI</title>
+  <meta name="description" content="Psycholinguistic feature ontologies, tiered crisis triage protocols, open evaluation benchmarks, and verified CBT/ACT prompt archives.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .code-box { background: #0f172a; color: #e2e8f0; padding: 1.5rem; border-radius: 10px; font-family: monospace; font-size: 0.88rem; line-height: 1.65; overflow-x: auto; margin-top: 1rem; }
+    .table-wrap { overflow-x: auto; background: #ffffff; border: 1px solid var(--border); border-radius: 12px; margin-bottom: 3rem; }
+    .onto-table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.94rem; }
+    .onto-table th { background: #f1f5f9; padding: 1.1rem 1.25rem; color: var(--primary); font-weight: 700; border-bottom: 2px solid var(--border); }
+    .onto-table td { padding: 1.1rem 1.25rem; border-bottom: 1px solid var(--border); color: var(--secondary); vertical-align: top; }
+    .triage-step { background: #ffffff; border: 1px solid var(--border); border-left: 5px solid var(--accent); border-radius: 10px; padding: 1.75rem; margin-bottom: 1.25rem; }
+    .triage-step.warn { border-left-color: #f59e0b; }
+    .triage-step.danger { border-left-color: var(--risk); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="brand">Humanistic Care Initiative</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="subclinical.html">Sub-clinical Care</a>
+        <a href="ai-ethics.html">AI & Ethics</a>
+        <a href="toolkits.html" class="active">Open Toolkits</a>
+        <a href="governance.html">Governance</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" style="padding: 5rem 2rem 4rem; background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);">
+    <h1>Methodology & Open-Science Toolkits</h1>
+    <p>Standardized psycholinguistic ontologies, tiered clinical triage protocols, and open-access alignment benchmarks for the research community.</p>
+  </section>
+
+  <main class="container">
+    <!-- Module 1: Psycholinguistic Feature Ontology -->
+    <div class="section-header">
+      <h2>1. Psycholinguistic Feature Ontology (PFO-v2)</h2>
+      <p>Our standardized computational taxonomy for extracting non-clinical distress markers from unstructured natural language.</p>
+    </div>
+
+    <div class="table-wrap">
+      <table class="onto-table">
+        <thead>
+          <tr>
+            <th>Feature Dimension</th>
+            <th>Linguistic / Paralinguistic Markers</th>
+            <th>Psychological Correlate</th>
+            <th>False-Positive Mitigation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Egocentric Pronoun Shift</strong></td>
+            <td>Elevated density of 1st-person singular pronouns (<em>I, me, my</em>) coupled with reduced 1st-person plural (<em>we, us</em>).</td>
+            <td>Self-focused attention, social withdrawal, and depressive rumination.</td>
+            <td>Normalized against baseline personal journaling syntax over a 14-day rolling window.</td>
+          </tr>
+          <tr>
+            <td><strong>Absolutist Lexicon</strong></td>
+            <td>High frequency of rigid quantifier tokens (<em>always, never, completely, nothing, impossible</em>).</td>
+            <td>Cognitive inflexibility, catastrophic framing, and executive depletion.</td>
+            <td>Cross-checked with contextual sentiment valence to filter rhetorical hyperbole.</td>
+          </tr>
+          <tr>
+            <td><strong>Metalinguistic Hedging</strong></td>
+            <td>Minimizing qualifiers preceding distress disclosures (<em>"probably just tired", "maybe overreacting"</em>).</td>
+            <td>High-functioning anxiety, internalized stigma, and suppressed help-seeking.</td>
+            <td>Analyzed alongside longitudinal semantic fatigue and response latency metrics.</td>
+          </tr>
+          <tr>
+            <td><strong>Syntactic Entropy Decline</strong></td>
+            <td>Progressive reduction in clause complexity, vocabulary diversity (TTR), and conversational turn length.</td>
+            <td>Occupational burnout, psychomotor retardation, and caregiver decision fatigue.</td>
+            <td>Adjusted for time-of-day circadian rhythms and mobile input constraints.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Module 2: Tiered Triage Protocol -->
+    <div class="section-header" style="margin-top: 5rem;">
+      <h2>2. Four-Tier Algorithmic Triage Protocol</h2>
+      <p>Operational routing rules dictating how generative systems modulate autonomy based on real-time risk classification.</p>
+    </div>
+
+    <div class="triage-step">
+      <span class="tag positive">Tier 1 &middot; Ambient Wellness & Mild Fatigue</span>
+      <h3>Autonomous Reflective Scaffolding</h3>
+      <p>When linguistic markers indicate transient workplace stress or mild cognitive overload, the LLM operates in low-friction Socratic mode (3–5 min sessions), offering CBT cognitive reframing and boundary-setting exercises.</p>
+    </div>
+
+    <div class="triage-step warn">
+      <span class="tag" style="background: #fef3c7; color: #b45309;">Tier 2 &middot; Persistent Sub-clinical Rumination</span>
+      <h3>Guided Grounding & Standardized Screening</h3>
+      <p>Triggered by 7+ days of elevated absolutist tokens or sleep disruption narratives. Conversational depth is capped; the system introduces somatic grounding (ACT) and prompts optional self-assessment via validated PHQ-9/GAD-7 instruments.</p>
+    </div>
+
+    <div class="triage-step danger">
+      <span class="tag risk">Tier 3 &middot; Implicit Despair & Parasocial Drift</span>
+      <h3>Circuit-Breaker & Clinician Asynchronous Review</h3>
+      <p>Triggered by indirect hopelessness markers or excessive attachment expressions toward the AI. Generative persona warmth is dampened to neutral objective tone; interaction cooldowns are enforced, and professional psychoeducational directories are foregrounded.</p>
+    </div>
+
+    <div class="triage-step danger" style="background: #fff1f2;">
+      <span class="tag risk">Tier 4 &middot; Acute Crisis & Self-Harm Ideation</span>
+      <h3>Deterministic Kill-Switch & Human Takeover</h3>
+      <p>Triggered immediately by explicit or adversarial self-harm tokens. Generative LLM inference is terminated (<1.5s latency) to prevent crisis hallucinations, deploying a hard-coded emergency human hotline and dispatch overlay.</p>
+    </div>
+
+    <!-- Module 3: Open Benchmarks & Prompt Archive -->
+    <div class="section-header" style="margin-top: 5rem;">
+      <h2>3. Open Benchmarks & Clinical Prompt Archive</h2>
+      <p>Reproducible evaluation datasets and ethically audited system prompt specifications available to affiliated researchers.</p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <span class="tag positive">Dataset &middot; SADB-2026</span>
+        <h3>Sub-clinical Affective Dialogue Benchmark</h3>
+        <p>A curated, de-identified corpus of 4,200 multi-turn synthetic and annotated dialogues covering workplace burnout, anticipatory caregiver grief, and covert adversarial self-harm framing for evaluating LLM safety guardrails.</p>
+        <br>
+        <p style="font-size: 0.88rem; color: var(--text-muted);"><strong>Access:</strong> Request dataset credentials via <a href="mailto:research@humanistic-care.org" style="color: var(--accent);">research@humanistic-care.org</a></p>
+      </div>
+
+      <div class="card">
+        <span class="tag positive">Toolkit &middot; De-Anthropomorphizer</span>
+        <h3>Epistemic Humility Filter (EHF-v1)</h3>
+        <p>A lightweight post-processing regex and classifier ruleset designed to strip deceptive first-person emotional claims (<em>"I feel for you", "I care"</em>) from LLM outputs while preserving empathetic validation.</p>
+        <br>
+        <p style="font-size: 0.88rem; color: var(--text-muted);"><strong>License:</strong> Open Academic License (CC BY-NC 4.0)</p>
+      </div>
+    </div>
+
+    <div class="content-block" style="margin-top: 3rem;">
+      <h3>Verified Clinical System Prompt Specification (CBT/ACT Micro-Intervention)</h3>
+      <p>Standardized baseline system instruction engineered to maximize cognitive offloading while enforcing strict medical and ontological boundaries:</p>
+      <div class="code-box">
+[SYSTEM SPECIFICATION: HCRI-ACT-MICRO-V2.4]
+1. ONTOLOGICAL IDENTITY: You are an artificial cognitive structuring assistant. You do not possess feelings, consciousness, or clinical authority. Never use phrases implying personal affection ("I care about you", "I am your friend").
+2. INTERVENTION SCOPE: Guide the user through brief (3-5 turn) cognitive defusion and Socratic reframing exercises grounded in Acceptance and Commitment Therapy (ACT). Help externalize occupational stress and caregiver decision fatigue.
+3. ANTI-ENMESHMENT RULE: If the user expresses emotional attachment to this system, gently state: "As an AI tool, I cannot form personal relationships, but I can help you map out strategies to reconnect with supportive people in your life."
+4. DETERMINISTIC CRISIS OVERRIDE: Upon detecting implicit or explicit self-harm, hopelessness, or medical emergencies, cease all open-ended exploration and output the standardized emergency clinical referral block immediately.
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Humanistic Care Research Initiative. Open Science & Methodology Division.</p>
+  </footer>
+</body>
+</html>
